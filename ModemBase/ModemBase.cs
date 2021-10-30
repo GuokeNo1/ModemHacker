@@ -14,6 +14,7 @@ namespace LibModemBase
         protected string host;
         public static string modem = "Base";
         public static bool needUser = false;
+        public static bool needLogin = true;
         public ModemBase(string host, string passwd)
         {
             this.host = host;

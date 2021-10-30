@@ -59,13 +59,20 @@ namespace ModemHacker
         }
         private void modelList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (((ModelData)modelList.SelectedItem).useUser)
-            {
-                userBox.Visibility = Visibility.Visible;
-            }
-            else
+            if (((ModelData)modelList.SelectedItem).needLogin) {
+                if (((ModelData)modelList.SelectedItem).useUser)
+                {
+                    userBox.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    userBox.Visibility = Visibility.Collapsed;
+                }
+                passwdBox.Visibility = Visibility.Visible;
+            } else
             {
                 userBox.Visibility = Visibility.Collapsed;
+                passwdBox.Visibility = Visibility.Collapsed;
             }
             isGetResult = false;
             output.Text = $"请先确认自己的光猫型号为\n{modelList.SelectedItem.ToString()}";
