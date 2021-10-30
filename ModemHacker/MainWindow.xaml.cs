@@ -30,6 +30,9 @@ namespace ModemHacker
         }
         void FlushDll()
         {
+            if (!Directory.Exists($"{AppDomain.CurrentDomain.BaseDirectory}Modems")) {
+                Directory.CreateDirectory($"{AppDomain.CurrentDomain.BaseDirectory}Modems");
+            }
             modelList.Items.Clear();
             ModelDatas.Clear();
             string[] dlls = Directory.GetFiles($"{AppDomain.CurrentDomain.BaseDirectory}Modems", "*.dll");
