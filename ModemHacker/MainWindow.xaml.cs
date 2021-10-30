@@ -81,7 +81,6 @@ namespace ModemHacker
         private void GET_Click(object sender, RoutedEventArgs e)
         {
             if (modelList.SelectedIndex > -1) {
-                isGetResult = true;
                 ModelData selectdata = modelList.SelectedItem as ModelData;
                 string username = userBox.Text;
                 string passwd = passwdBox.Text;
@@ -93,8 +92,15 @@ namespace ModemHacker
                 else {
                     modem = System.Activator.CreateInstance(selectdata.ClassData, host, passwd) as ModemBase;
                 }
-                string info = modem.getModemInfo();
-                output.Text = info;
+                try
+                {
+                    string info = modem.getModemInfo();
+                    output.Text = info;
+                    isGetResult = true;
+                }
+                catch (Exception ex) {
+                    output.Text = $"发生了错误，可能因为机型选择不当！\n{ex.Message}";
+                }
             }
         }
         private void SAVE_Click(object sender, RoutedEventArgs e)
