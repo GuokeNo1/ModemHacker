@@ -7,3 +7,6 @@
 # 使用方式  
 下载Release版本打开软件左侧选择调制解调器对应型号即可。  
 ![截图](https://github.com/GuokeNo1/ModemHacker/raw/main/window.png)
+# 支持的机型  
+[TEWA-600NEM](https://github.com/GuokeNo1/TEWA-600NEM)  
+[HG2201T](https://github.com/GuokeNo1/HG2201T)  
