@@ -6,6 +6,7 @@
 其余功能还在完善中... 
 # 使用方式  
 下载Release版本打开软件左侧选择调制解调器对应型号即可。  
+模块放置到发布软件根目录下Modems文件夹下即可  
 ![截图](https://github.com/GuokeNo1/ModemHacker/raw/main/window.png)
 # 支持的机型  
 [TEWA-600NEM](https://github.com/GuokeNo1/TEWA-600NEM)  
